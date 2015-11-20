@@ -44,8 +44,8 @@ namespace ShellLauncher
 
         public static Dictionary<string, TypeParameter> dictionarySettingsMandatory = new Dictionary<String, TypeParameter>()
         {
-            { LabelLaunchFirstTask,TypeParameter.NAME_FIRST_TASK },
-            { LabelLaunchSecondTask,TypeParameter.NAME_SECOND_TASK },
+            { LabelLaunchFirstTask,TypeParameter.PATH_FIRST_TASK },
+            { LabelLaunchSecondTask,TypeParameter.PATH_SECOND_TASK },
             { LabelconnectionAddress,TypeParameter.ADDRESS_CONNECTION },
             { LabelTCPPort,TypeParameter.TCPPORT_CONNECTION },
         };
@@ -128,11 +128,11 @@ namespace ShellLauncher
                                 case 1:
                                     switch (typeParam)
                                     {
-                                        case TypeParameter.NAME_FIRST_TASK:
+                                        case TypeParameter.PATH_FIRST_TASK:
                                             lineLaunchFirstTask = param;
                                             Console.Write("lineLaunchFirstTask: " + lineLaunchFirstTask + "\r\n");
                                             break;
-                                        case TypeParameter.NAME_SECOND_TASK:
+                                        case TypeParameter.PATH_SECOND_TASK:
                                             lineLaunchSecondTask = param;
                                             Console.Write("lineLaunchSecondTask: " + param + "\r\n");
                                             break;
@@ -182,8 +182,8 @@ namespace ShellLauncher
     public enum TypeParameter
     {
         NONE,
-        NAME_FIRST_TASK,
-        NAME_SECOND_TASK,
+        PATH_FIRST_TASK,
+        PATH_SECOND_TASK,
         ADDRESS_CONNECTION,
         TCPPORT_CONNECTION,
         INTERVAL_TASKS,
