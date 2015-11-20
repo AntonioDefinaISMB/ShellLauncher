@@ -33,7 +33,7 @@ The list of parameters (Mandatory and optionals) are listed in the following:
 
 ### Specified Configuration Files  ###
 
-*%PATHSHELL%>*ShellLauncher.exe -settingsLauncher=<PATH_FILE_SETTINGS>*
+*%PATHSHELL%>ShellLauncher.exe -settingsLauncher=PATH_FILE_SETTINGS*
 
 It extract settings from *PATH_FILE_SETTINGS*. The format of the configuration file reflects the one reported in the Paragraph `Inline Parameters` with parameters disposed per line. In the following the explicit format:
 
