@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ShellLauncher
 {
@@ -40,7 +38,12 @@ namespace ShellLauncher
         public const String LabelIntervalTasks          = "-intervalTasks";
         public const String LabelFileSettings           = "-settingsLauncher";
         public const String LabelLeaveShellExecute      = "-leaveShellAlwaysActive";
+
+#if DEBUG
+        public const String PathDefaultSettingsLauncher = "D:/settingsLauncher.conf";
+#else
         public const String PathDefaultSettingsLauncher = "settingsLauncher.conf";
+#endif
 
         public static Dictionary<string, TypeParameter> dictionarySettingsMandatory = new Dictionary<String, TypeParameter>()
         {
@@ -73,7 +76,7 @@ namespace ShellLauncher
 
                         for (int indexString = 0; indexString < listSettings.Length; indexString++)
                         {
-                            if (listSettings[indexString].Contains(charToRemove))
+                            if (listSettings[indexString].Contains(charToRemove.ToString()))
                             {
                                 listSettings[indexString] = listSettings[indexString].Remove(listSettings[indexString].IndexOf(charToRemove), 1);
                             }
